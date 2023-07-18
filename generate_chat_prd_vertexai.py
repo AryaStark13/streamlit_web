@@ -5,8 +5,10 @@ import wandb
 # from wandb_addons.prompts import Trace
 import streamlit as st
 import datetime as dt
+from google.oauth2 import service_account
 
-credentials, project = google.auth.default()
+# credentials = service_account.Credentials.from_service_account_file("token.json")
+credentials = service_account.Credentials.from_service_account_info(dict(st.secrets["GOOGLE_APPLICATION_CREDENTIALS"]))
 
 vertexai.init(project="synap-labs-390404", location="us-central1", credentials=credentials)
 

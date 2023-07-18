@@ -1,0 +1,8 @@
+synap_labs_github_env/
+wandb/
+.env
+tasks.txt
+__pycache__/
+.vscode/
+.streamlit/
+wandb-addons/
